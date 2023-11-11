@@ -1,0 +1,345 @@
+@import url("https://fonts.google.com/specimen/League+Spartan");
+
+:root {
+  /* Theme 1 */
+  --Very-dark-desaturated-blue-1: hsl(222, 26%, 31%);
+  --Very-dark-desaturated-blue-2: hsl(223, 31%, 20%);
+  --Very-dark-desaturated-blue-3: hsl(224, 36%, 15%);
+
+  /* keys */
+  --Desaturated-dark-blue-1: hsl(225, 21%, 49%);
+  --Desaturated-dark-blue-2: hsl(224, 28%, 35%);
+  --red: hsl(6, 63%, 50%);
+  --Dark-red: hsl(6, 70%, 34%);
+  --Light-grayish-orange: hsl(30, 25%, 89%);
+  --Grayish-orange: hsl(28, 16%, 65%);
+
+  /* text */
+  --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --White: hsl(0, 0%, 100%);
+
+  /* Theme 2 */
+  --Light-gray: hsl(0, 0%, 90%);
+  --Grayish-red: hsl(0, 5%, 81%);
+  --Very-light-gray: hsl(0, 0%, 93%);
+
+  /* keys 2*/
+  --Dark-moderate-cyan: hsl(185, 42%, 37%);
+  --Very-dark-cyan: hsl(185, 58%, 25%);
+  --Orange: hsl(25, 98%, 40%);
+  --Dark-orange: hsl(25, 99%, 27%);
+  --Light-grayish-yellow: hsl(45, 7%, 89%);
+  --Dark-grayish-orange: hsl(35, 11%, 61%);
+
+  /* text */
+  --Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+  --White: hsl(0, 0%, 100%);
+
+  /* Theme 3 */
+  --Very-dark-violet-1: hsl(268, 75%, 9%);
+  --Very-dark-violet-2: hsl(268, 71%, 12%);
+
+  /* keys 3*/
+  --Dark-violet: hsl(281, 89%, 26%);
+  --Vivid-magenta: hsl(285, 91%, 52%);
+  --Pure-cyan: hsl(176, 100%, 44%);
+  --Soft-cyan: hsl(177, 92%, 70%);
+  --Very-dark-violet: hsl(268, 47%, 21%);
+  --Dark-magenta: hsl(290, 70%, 36%);
+
+  /* text */
+  --Light-yellow: hsl(52, 100%, 62%);
+  --Very-dark-blue: hsl(198, 20%, 13%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 2px solid yellow; */
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  overflow: hidden;
+  
+}
+
+.parentcont {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: var(--Very-dark-desaturated-blue-1);
+}
+
+.container {
+  max-width: 100%;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  position: relative;
+  color: white;
+}
+
+h3 {
+  font-size: 15px;
+  /* color: white; */
+}
+
+h5 {
+  /* color: white; */
+  font-size: 12px;
+}
+
+.switch {
+  margin-left: 15px;
+  display: flex;
+  justify-content: center;
+  /* border: 3px solid var(--Very-dark-desaturated-blue-3); */
+  border-radius: 50px;
+  width: 100px;
+  background: var(--Very-dark-desaturated-blue-2);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.radio {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  background-color: var(--Desaturated-dark-blue-1);
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.radio:hover {
+  cursor: pointer;
+}
+
+#switch-one {
+  opacity: 1;
+}
+
+input[type="radio"]#switch-one {
+  appearance: none;
+  background-color: var(--Dark-red);
+}
+
+input[type="radio"]#switch-two {
+  appearance: none;
+  background-color: var(--Orange);
+}
+input[type="radio"]#switch-three {
+  appearance: none;
+  background-color: var(--Pure-cyan);
+}
+
+.para {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-15px, -20px);
+  font-size: 10px;
+  width: 70px;
+}
+
+.theme {
+  display: flex;
+  align-items: center;
+}
+
+.screen {
+  max-width: 100%;
+  text-align: right;
+  height: 80px;
+  margin-bottom: 10px;
+  background: var(--Very-dark-desaturated-blue-3);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 32px;
+  color: white;
+  padding-right: 10%;
+}
+
+.center {
+  background: var(--Very-dark-desaturated-blue-2);
+  border-radius: 5px;
+  width: 100%;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 25px;
+  grid-auto-rows: 50px;
+}
+
+
+
+.btn {
+  font-size: 30px;
+  border-radius: 10px;
+  background: var(--Light-grayish-orange);
+  border: none;
+  color: var(--Very-dark-grayish-blue);
+  /* box-shadow: 0px 5px var(--Dark-grayish-orange); */
+}
+
+.del {
+  background-color: var(--Desaturated-dark-blue-2);
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+}
+
+.reset {
+  grid-column: -5 / -3;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--Desaturated-dark-blue-2);
+  font-size: 20px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+}
+
+.equal {
+  grid-column: -3 / -1;
+  border: none;
+  border-radius: 10px;
+  background: var(--Dark-red);
+  font-size: 30px;
+  color: white;
+}
+
+.btn:hover {
+  background-color: var(--White);
+  cursor: pointer;
+}
+
+.del:hover {
+  background: var(--Desaturated-dark-blue-1);
+  cursor: pointer;
+}
+.reset:hover {
+  background: var(--Desaturated-dark-blue-1);
+  cursor: pointer;
+}
+
+.equal:hover {
+  background-color: var(--red);
+  cursor: pointer;
+}
+
+/* Adding themes with JS */
+
+.themeone.btn {
+  background: var(--Light-grayish-orange);
+  color: var(--Very-dark-grayish-blue);
+  box-shadow: '0px 5px var(--Dark-grayish-orange)';
+}
+
+.themeone.btn:hover {
+  background: var(--White);
+  cursor: pointer;
+}
+
+.themeone.del.themeone.reset {
+  background-color: var(--Desaturated-dark-blue-2);
+}
+
+.themeone.screen,
+.themeone.head {
+  color: white;
+}
+
+.themeone.switch {
+  background: var(--Very-dark-desaturated-blue-2);
+}
+
+/* theme two */
+
+.themetwo.btn {
+  background: var(--Light-grayish-yellow);
+  color: var(--Very-dark-grayish-yellow);
+  box-shadow: '0px 5px var(--Dark-grayish-orange)';
+
+}
+
+.themetwo.btn:hover {
+  background: var(--White);
+  cursor: pointer;
+}
+
+.themetwo.screen,
+.themetwo.head {
+  color: var(--Very-dark-grayish-yellow);
+}
+
+.themetwo.del,
+.themetwo.reset {
+  background-color: var(--Dark-moderate-cyan);
+}
+
+.themetwo.equal {
+  background-color: var(--Orange);
+}
+
+.themetwo.switch {
+  background: var(--Grayish-red);
+}
+
+/* theme three */
+
+.themethree.btn {
+  background: var(--Very-dark-violet);
+  color: var(--Light-yellow);
+  box-shadow: '0px 5px var(--Dark-magenta)';
+}
+
+.themethree.switch {
+  background: var(--Very-dark-violet-2);
+}
+
+.themethree.screen,
+.themethree.head {
+  color: var(--Light-yellow);
+}
+
+.themethree.del,
+.themethree.reset {
+  background-color: var(--Vivid-magenta);
+}
+
+.themethree.equal {
+  background-color: var(--Pure-cyan);
+}
+
+@media (max-width: 780px) {
+  .container {
+    max-width: 100%;
+    width: 350px;
+  }
+}
+
+@media (max-width: 280px) {
+  .container {
+    max-width: 100%;
+    width: 285px;
+  }
+}
